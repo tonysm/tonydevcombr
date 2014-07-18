@@ -17,8 +17,9 @@ web1:
     - eaccelerator
     - memcached
     - curl
+  before_build:
+    - "if [ ! -f composer.phar ]; then curl -s http://getcomposer.org/installer | php; fi; php composer.phar install --prefer-source --no-scripts"
   before_deploy:
-    - "composer install"
     - "php artisan optimize --force"
   after_deploy:
     - "rm -f storage/cache/*"
