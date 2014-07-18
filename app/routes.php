@@ -1,3 +1,6 @@
 <?php
 
-Route::get('/', 'PagesController@home');
+Route::get('/', [
+    'as' => 'home_path',
+    'uses' => 'PagesController@home'
+]);
