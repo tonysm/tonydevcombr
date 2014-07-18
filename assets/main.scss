@@ -1,3 +1,28 @@
+$green: #18bc9c;
+
 body {
   padding-top: 70px;
+  background-color: #EEE;
+  border-top: 6px solid $green;
+}
+
+.nav-home {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.nav-home li {
+  padding: 0 2em;
+}
+
+.home-jumbo {
+  background-color: inherit;
+}
+
+small.copyright {
+  font-size: 11px;
+}
+
+.img-gravatar {
+  border: 5px solid $green;
 }
